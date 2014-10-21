@@ -18,9 +18,10 @@ print "Put in the amount of degrees celcius that you would like to convert to fa
 cel = int(raw_input())
 
 def fahcalc(cel):
-    cel = cel * 9
-    cel = cel / 5
-    cel = cel + 32
+    fah = cel * 9
+    fah = fah / 5
+    fah = fah + 32
+    return fah
     
 
-print "It is " + str(cel) + " degrees fahrenheit."
+print "It is " + str(fahcalc(cel)) + " degrees fahrenheit."
