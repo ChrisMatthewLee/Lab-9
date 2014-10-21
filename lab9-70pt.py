@@ -12,16 +12,21 @@
 # Accept user input 
 # Calculate fahrenheit
 # Output answer
+#----------------------------------------------------------------------
 
+
+#ask
 print "Put in the amount of degrees celcius that you would like to convert to fahrenheit"
 
+#define variable
 cel = int(raw_input())
 
+#calculate
 def fahcalc(cel):
     fah = cel * 9
     fah = fah / 5
     fah = fah + 32
     return fah
     
-
+#Give answer
 print "It is " + str(fahcalc(cel)) + " degrees fahrenheit."
