@@ -18,7 +18,9 @@ sick = 1
 y = "yes"
 n = "no"
 
+while(sick == 1):
 
+    print "-------------------------------------------------------------------------------------------"
     print "Hello there! Lets take your temperature! Type only the number of your temperature."
 
     userTemp = int(raw_input())
@@ -37,15 +39,16 @@ n = "no"
 
     if userTemp < 106:
         if userTemp > 99:
-            if areYouSick == n:
+            if areYouSick == "n":
                 sick = 0
                 
-    if recentTravel == y:
+    if recentTravel == "y":
         if temp > 99:
             sick = 1
-        if areYouSick == y:
+        if areYouSick == "y":
             sick = 1    
 
     if sick == 1:
         print 'You have the disease!'
         
+print 'You don\'t have it.'
