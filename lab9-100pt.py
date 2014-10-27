@@ -14,9 +14,38 @@
 # - A temperature of over 102F and they have been sick in the last 24 hours
 # - A temperature over 100, OR they've been sick in the last 24 hours, AND they've recently travelled to West Africa.
 #_________________________________________________________________________________________________________________________
+sick = 1
+y = "yes"
+n = "no"
 
-print "Hello there! Lets take your temperature! Type only the number of your temperature."
 
-userTemp = int(raw_input())
+    print "Hello there! Lets take your temperature! Type only the number of your temperature."
 
-print userTemp
+    userTemp = int(raw_input())
+
+    print "Your temperature is " + str(userTemp) + " degrees fahrenheit."
+    print "Have you been sick within the last 24 hours? Type only yes or no."
+
+    areYouSick = raw_input()
+
+    print "Have you recently travelled to West Africa? Type only yes or no."
+
+    recentTravel = raw_input()
+
+    if userTemp > 105:
+        sick = 1
+
+    if userTemp < 106:
+        if userTemp > 99:
+            if areYouSick == n:
+                sick = 0
+                
+    if recentTravel == y:
+        if temp > 99:
+            sick = 1
+        if areYouSick == y:
+            sick = 1    
+
+    if sick == 1:
+        print 'You have the disease!'
+        
